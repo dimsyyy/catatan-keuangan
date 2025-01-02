@@ -1,0 +1,113 @@
+:root {
+    --biru: #2b3d6b;
+    --biru-tua: #202d4e;
+    --biru-muda: #355d98;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    background-color: var(--biru);
+    font-family: 'Open sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+*, html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open sans', sans-serif;
+}
+
+/* LOGIN */
+.inputgrup input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    border: none;
+}
+
+.inputgrup label {
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+    align-self: center;
+}
+.container{
+    background-color: var(--biru-muda);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px 30px;
+    width: fit-content;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.container .sitename{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 20px;;
+    font-weight: 200;
+}
+.container .desk{
+    color: white;
+    margin-bottom: 30px;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+}
+.container .formgrup .inputgrup{
+    display: flex;
+
+}
+.icon{
+    padding: 10px;
+    background-color: green;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.icon i{
+    color: white;
+}
+.inputgrup{
+    height: 33px;
+    margin-bottom: 10px;
+}
+.inputgrup input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 100;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--biru-tua);
+    color: white;
+    align-items: center;
+}
+
+.inputgrup input::placeholder {
+    color: rgba(255, 255, 255, 0.76);
+}
+.formsubmit{
+    margin-top: 20px;
+}
+.formsubmit button{
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--biru-tua);
+    color: white;
+    font-size: 15pxx;
+}
+.formsubmit button:hover{
+    background-color: var(--biru);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.formsubmit a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    margin-left: 5px;
+}
