@@ -45,7 +45,7 @@ body{
     color: white;
     margin-bottom: 10px;
     font-size: 20px;;
-    font-weight: 200;
+    font-weight: 900;
 }
 .container .desk{
     color: white;
@@ -82,7 +82,6 @@ body{
     border-bottom-right-radius: 10px;
     background-color: var(--biru-tua);
     color: white;
-    align-items: center;
 }
 
 .inputgrup input::placeholder {
@@ -110,4 +109,305 @@ body{
     font-size: 15px;
     font-weight: 100;
     margin-left: 5px;
+}
+/* Dashboard */
+.logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #FF0000;
+    padding: 6px 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.logout a:hover {
+    text-decoration: underline;
+}
+.wrap{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;
+    justify-content: flex-start; */
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.wrap .user {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wrap .user .userimg i{
+    /* width: 80px; */
+    /* height: 80px; */
+    font-size: 40px;
+}
+.wrap .user .username h1{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 900;
+}
+.wrap .user .username p{
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 400;
+}
+.wrap .tabungan{
+    padding: 10px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    /* width: 100%; */
+}
+.wrap .tabungan h1{
+    font-size: 16px;
+    font-weight: 900;
+}
+.wrap .tabungan p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.aksi{
+    /* width: 70%; */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* max-width: 70%; */
+}
+
+.aksi .btn-aksi button{
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    padding: 5px 9px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+}
+.aksi .btn-aksi{
+    display: flex;
+    gap: 2px;
+}
+.aksi .btn-aksi .kiri{
+    border-radius: 10px 0 0 10px;
+    background-color: #2196F3;
+}
+.aksi .btn-aksi .kanan{
+    border-radius: 0 20px 20px 0;
+    background-color: #FF9800;
+}
+
+.riwayat{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+}
+.riwayat h1{
+    padding: 10px;
+    /* background-color: #2196F3; */
+    color: black;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 10px 10px 0 0;
+}
+.riwayat .list-riwayat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.riwayat .list-riwayat .riwayat-item .judul{
+    font-weight: 800;
+}
+.riwayat .list-riwayat .riwayat-jumlah{
+    font-weight: 800;
+    font-size: 13px;
+}
+.riwayat .list-riwayat .riwayat-item  p{
+    font-weight: 400;
+    font-size: 13px
+}
+
+.form-popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.form-popup.show{
+    display: block;
+    opacity: 1;
+    animation: fade 0.3s ease;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        /* transform: scale(0.9); */
+    }
+    to {
+        opacity: 1;
+        /* transform: scale(1); */
+    }
+}
+.form-container h2{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.form-container .input-group input[type=text], .form-container .input-group input[type=number] {
+    padding: 10px;
+    border: none;
+    background: #f1f1f1;
+    height: fit-content;
+    border-radius: 0 10px 10px 0;
+}
+.form-container .input-group{
+    display: flex;
+    gap: 0;
+}
+.form-container .input-group i {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+.form-container .input-group input[type=text]:focus, .form-container input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.btn-close button{
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10%;
+    font-size: 20px;
+    padding: 5px;
+    z-index: 9999;
+}
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: calc(100% - 40px);
+        max-width: 400px;
+        box-shadow: none;
+    }
+
+    .container .sitename {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .container .desk {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* .formgrup {
+        flex-direction: column;
+        gap: 10px;
+    } */
+
+    .inputgrup {
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+
+    .inputgrup .icon {
+        border-radius: 5px 0 0 5px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inputgrup input {
+        border-radius: 0 5px 5px 0;
+        padding: 10px;
+    }
+
+    .formsubmit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formsubmit button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .formsubmit a {
+        margin-top: 10px;
+    }
+    .formgrup span{
+        display: none;
+    }
 }

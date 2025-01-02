@@ -1,24 +1,24 @@
 @extends('induk.body')
-@section('title','Login')
-@section('isi')
+@section('title','Daftar')
 
 <div class="container">
     <h1 class="sitename">Budget Aura</h1>
     <p class="desk">Budget Aura adalah aplikasi web pencatat keuangan!</p>
 
-    @if(session('success'))
-        <div class="success" style="color: white; font-size: 14px; margin-bottom: 10px;">
-            {{ session('success') }}
-        </div>
-    @endif
-    <form action="/loginaction" method="POST">
+    <form action="/registeraction" method="POST">
         @csrf
         <div class="formgrup">
             <div class="inputgrup">
                 <div class="icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <input type="text" name="name" placeholder="Nama Lengkap" required autofocus>
+            </div>
+            <div class="inputgrup">
+                <div class="icon">
                     <i class="fa-regular fa-envelope"></i>
                 </div>
-                <input type="email" name="email" placeholder="emailkamu@gmail.com" required autofocus>
+                <input type="email" name="email" placeholder="emailkamu@gmail.com" required>
             </div>
             <div class="inputgrup">
                 <div class="icon">
@@ -33,18 +33,11 @@
                 </div>
             @endif
 
-            <div class="inputgrup">
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Biarkan saya tetap masuk</label>
-            </div>
             <div class="formsubmit">
-                <button><i class="fa-solid fa-right-to-bracket"></i> Login</button>
-                <span style="color: white; margin-left: 5px;"> | </span><a href="/daftar">Buat Akun</a>
+                <button><i class="fa-solid fa-user-plus"></i> Daftar</button>
+                <span style="color: white; margin-left: 5px;"> | </span><a href="/login">Login</a>
             </div>
         </div>
-
     </form>
+
 </div>
-
-
-@endsection
